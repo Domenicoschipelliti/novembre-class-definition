@@ -3,7 +3,10 @@ package es_1;
 public class Rettangolo {
 
     private int larghezza;  //<--scope di istanza
-    private int altezza;    //<--attributo
+    private int altezza;//<--attributo
+
+    private int lar;
+    private int alt;
 
     public int getLarghezza(){
         return larghezza;
@@ -22,8 +25,7 @@ public class Rettangolo {
         this.altezza=altezza;
         int piu=perimetroRet();
         int pe=areaRet();
-        System.out.println(piu);
-        System.out.println(pe);
+
     }
 
 
@@ -35,6 +37,8 @@ public class Rettangolo {
     }
 
 
+
+
     public  int perimetroRet(){
         int per=this.larghezza + this.altezza;
         System.out.println(per);
@@ -42,6 +46,40 @@ public class Rettangolo {
 
     }
 
+
+    public int areal(){
+        int mol=this.alt * this.lar;
+        System.out.println(mol);
+        return mol;
+    }
+
+    public int arelar(){
+        int mol=this.alt + this.lar;
+        System.out.println(mol);
+        return mol;
+    }
+
+    public int getAlt() {
+        return alt;
+    }
+    public void setAlt(int cal){
+        this.alt=cal;
+        int si=areal();
+        int no=arelar();
+        int prec=perimetroRet();
+        int pre=areaRet();
+    }
+
+    public int getLar(){
+        return lar;
+    }
+    public void setLar(int cal){
+        this.lar=cal;
+        int si=areal();
+        int no=arelar();
+        int prec=perimetroRet();
+        int pre=areaRet();
+    }
 
 
 }
